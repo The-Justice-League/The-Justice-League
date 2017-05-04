@@ -1,9 +1,9 @@
 {
-  "name": "",
-  "version": "",
-  "description": "",
-  "author": "",
-  "license": "",
+  "name": "Tribal",
+  "version": "0.0.0",
+  "description": "Collaborative playlist editor.",
+  "author": "Ramsha Mushtaq, Kurt Larson, James Hogan",
+  "license": "ISC",
   "engines": {
     "node": ">=6.4.0"
   },
@@ -32,7 +32,8 @@
     "babel-register": "^6.7.2",
     "chai": "^3.5.0",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
-    "mocha": "^3.3.0"
+    "mocha": "^3.3.0",
+    "supertest": "^3.0.0"
   },
   "babel": {
     "presets": [
