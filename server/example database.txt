@@ -1,0 +1,9 @@
+database example
+
+var playlist = mongoose.Schema({
+  playlist: { type: String, unique: true },
+  songs: [{
+    uri: String
+  }]
+});
+

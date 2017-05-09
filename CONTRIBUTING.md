@@ -1,15 +1,35 @@
 # Contributing
 
+## Preliminary Setup
+
+1. [Install Package Control](https://packagecontrol.io/installation) for Sublime if you haven't already.
+2. Install the EditorConfig plugin for Sublime, which will help us automatically maintain consistent editor settings (based on the .editorconfig file in GitHub). 
+  * In Sublime, open the Command Palette: Command-Shift-P (Mac) or Ctrl-Shift-P (Windows)
+  * In the window that appears, type "Install Package" and press Enter
+  * In the next window that appears, type "EditorConfig" and press Enter
+  * Restart Sublime
+3. Recommended:  Install SublimeLinter and its ESLint plugin for real-time lint checking. 
+  * Using from Sublime's Command Palette (Command-Shift-P / Ctrl-Shift-P):
+  * `Package Control: Install Package -> SublimeLinter`
+  * `Package Control: Install Package -> SublimeLinter-contrib-eslint`
+4. Install Heroku
+  * Create a [Heroku](http//www.heroku.com) account if you don't have one already
+  * Install the Heroku CLI
+    * `brew install heroku` (on Mac)
+    * For other platforms, download from the [Heroku website](https://devcenter.heroku.com/articles/heroku-cli)
+  * Log in to Heroku through the CLI: `heroku login`
+
+
 ## General Workflow
 
 1. Fork the repo
-1. Cut a namespaced feature branch from master
-1. Make commits to your feature branch. Prefix each commit like so:
-1. When you've finished with your fix or feature, Rebase upstream changes into your branch. submit a pull request directly to master. Include a description of your changes.
-1. Your pull request will be reviewed by another maintainer. The point of code reviews is to help keep the codebase clean and of high quality and, equally as important, to help you grow as a programmer. If your code reviewer requests you make a change you don't understand, ask them why.
-1. Fix any issues raised by your code reviwer, and push your fixes as a single new commit.
-1. Once the pull request has been reviewed, it will be merged by another member of the team. Do not merge your own commits.
-
+2. Cut a namespaced feature branch from master
+3. Make commits to your feature branch. Prefix each commit like so:
+4. When you've finished with your fix or feature, Rebase upstream changes into your branch. submit a pull request directly to master. Include a description of your changes.
+5. Your pull request will be reviewed by another maintainer. The point of code reviews is to help keep the codebase clean and of high quality and, equally as important, to help you grow as a programmer. If your code reviewer requests you make a change you don't understand, ask them why.
+6. Fix any issues raised by your code reviwer, and push your fixes as a single new commit.
+7. Once the pull request has been reviewed, it will be merged by another member of the team. Do not merge your own commits.
+  
 ## Detailed Workflow
 
 ### Fork the repo

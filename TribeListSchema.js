@@ -1,4 +1,3 @@
-var TribeListsSchema = mongoose.Schema({
-  TribeList_id: Number,
+var TribeListSchema = mongoose.Schema({
   songRefs: Array,
 });
