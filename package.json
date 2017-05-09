@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "Tribal",
   "version": "",
   "description": "",
   "author": "",
@@ -7,9 +7,10 @@
   "engines": {
     "node": ">=6.4.0"
   },
-  "scripts": {
-  },
+  "scripts": {},
   "dependencies": {
+    "express": "^4.15.2",
+    "socket.io": "^1.7.3"
   },
   "devDependencies": {
     "babel-cli": "^6.7.5",
