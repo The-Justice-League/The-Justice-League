@@ -1,6 +1,6 @@
 module.exports.mongoose = require( './init' );
 
-var PlayListSchema = mongoose.Schema({
+const PlayListSchema = mongoose.Schema({
   name: {
     type: String,
     unique: true
@@ -10,7 +10,7 @@ var PlayListSchema = mongoose.Schema({
   }]
 });
 
-var PlayList = mongoose.model('PlayList', PlayListSchema);
+const PlayList = mongoose.model('PlayList', PlayListSchema);
 
 // find all playlists
 function getAllPlayLists(callback) {
