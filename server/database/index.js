@@ -1,6 +1,6 @@
 const mongoose = require( './init' );
 
-var PlayListSchema = mongoose.Schema({
+const PlayListSchema = mongoose.Schema({
   name: {
     type: String,
     unique: true
