@@ -1,5 +1,5 @@
 const express = require( 'express' );
-const db = require( '../database' );
+const db = require( './database' );
 const Promise = require( 'bluebird' );
 
 const serverPort = process.env.PORT || 4242;
