@@ -1,4 +1,5 @@
-module.exports.mongoose = require( './init' );
+module.exports.mongoose = require('./init');
+const mongoose = require('mongoose');
 
 const PlayListSchema = mongoose.Schema({
   name: {
@@ -13,19 +14,19 @@ const PlayListSchema = mongoose.Schema({
 const PlayList = mongoose.model('PlayList', PlayListSchema);
 
 // getAllPlayLists retrieves all playlists
-function getAllPlayLists(callback) {
-  return Playlist.find({}, callback);
-}
+const getAllPlayLists = function() {
+  return Playlist.find({});
+};
 
 // getSinglePlaylist retrieves a single playlist associated with the given name
-function getSinglePlayList(name) {
+const getSinglePlayList = function(name) {
   return Playlist.find({name: name});
-}
+};
 
 // insertSong inserts a song(s) into the db
-function insertSong(song) {
+const insertSong = function(song) {
   return Playlist.create(song);
-}
+};
 
 exports.getAllPlayLists = getAllPlayLists;
 exports.getSinglePlayList = getSinglePlayList;
