@@ -1,5 +1,4 @@
 const mongoose = require('./init');
-const Promise = require('bluebird');
 
 const PlayListSchema = mongoose.Schema({
   name: {
@@ -25,19 +24,11 @@ const getSinglePlayList = function(name) {
 
 // insertSong inserts a song(s) into the db
 const insertSong = function(id, song) {
-  return new Promise((resolve, reject) => {
-    PlayList.findById(id)
+  return PlayList.findById(id)
     .then(playList => {
       playList.songs.push(song);
-      playList.save()
-      .then(() => {
-        resolve();
-      });
-      .catch(() => {
-        reject();
-      });
+      return playList.save();
     });
-  });
 };
 
 module.exports = mongoose;
