@@ -1,5 +1,4 @@
 const mongoose = require('./init');
-// const mongoose = require('mongoose');
 
 const PlayListSchema = mongoose.Schema({
   name: {
@@ -25,10 +24,10 @@ const getSinglePlayList = function(name) {
 
 // insertSong inserts a song(s) into the db
 const insertSong = function(song) {
-  return Playlist.create(song);
+  return Playlist.insertMany(song);
 };
 
 module.exports = mongoose;
-exports.getAllPlayLists = getAllPlayLists;
-exports.getSinglePlayList = getSinglePlayList;
-exports.insertSong = insertSong;
+module.exports.getAllPlayLists = getAllPlayLists;
+module.exports.getSinglePlayList = getSinglePlayList;
+module.exports.insertSong = insertSong;
