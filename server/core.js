@@ -34,7 +34,7 @@ app.get('/tracks', (req, res) => {
       return {uri: track.uri, artist: track.artists[0].name};
     });
     console.log(tracks);
-    res.send(tracks);
+    res.status(200).send(tracks);
     return;
   });
 });

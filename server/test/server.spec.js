@@ -11,4 +11,10 @@ describe( 'tribal server', function() {
       .get('/')
       .expect(200);
   });
+
+  it( 'returns status 200 in response to GET /tracks', function() {
+    return request(server)
+    .get('/tracks')
+    .expect(200);
+  });
 });
