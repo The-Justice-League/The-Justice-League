@@ -1,6 +1,10 @@
 <div class="container">
 
-  <H1>TRIBAL</H1>
+  <H1 class="header">TRIBAL ALL STARS</H1>
+  
+  <div id="searchBar">
+    <login />
+  </div>
 
   <div id="searchBar">
     <search search-results-handler="ctrl.searchResultsHandler" />
@@ -10,10 +14,15 @@
 
     <div class="appColumns" id="searchResults">
       <search-results search-results="ctrl.searchResults" />
+      <!-- CSS style #searchResults to scroll only  -->
     </div>
 
     <div class="appColumns" id="playlist">
+      <!-- CSS style #playlist to scroll only  -->
+      
+      <div class="appColumns"><like /></div>
       <playlist />
+      
     </div>
 
   </div>
