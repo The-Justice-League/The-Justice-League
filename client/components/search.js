@@ -1,24 +1,22 @@
-const SearchController = function( tribalServer ) {
-
+angular.module('tribal')
+.controller('SearchController', function(tribalServer) {
   this.searchButtonHandler = (query) => {
     tribalServer.spotifySearch( query )
       .then( (results) => {
         this.searchResultsHandler( results );
       });
   };
-};
-
-const Search = function() {
+})
+.directive('search', function() {
   return {
     scope: {
       searchResultsHandler: '<',
     },
     restrict: 'E',
-    controller: [ 'tribalServer', SearchController ],
+    controller: 'SearchController',
     controllerAs: 'ctrl',
     bindToController: true,
     templateUrl: '/templates/search.html'
   };
-};
+});
 
-angular.module('tribal').directive('search', Search);

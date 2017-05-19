@@ -11,6 +11,16 @@ const tribalServer = function( $http ) {
     socket.emit( 'playlist', playlistId, callback );
   };
 
+  this.likeButton = function(count, song) {
+    socket.emit( 'like', count, song )
+    console.log('Like Button Clicked', count)
+  }
+
+  this.removeButton = function(song) {
+    socket.emit( 'remove', song )
+    console.log('remove Button Clicked', song)
+  }
+
   // request that the server add a song to the playlist
   this.addSong = function( uri ) {
     socket.emit( 'add song', uri );
@@ -26,6 +36,10 @@ const tribalServer = function( $http ) {
         trackName: trackName,
       }
     });
+  };
+
+  this.facebookAuth = function () {
+    return $http.get( '/auth/facebook' );
   };
 };
 
