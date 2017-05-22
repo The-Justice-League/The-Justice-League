@@ -1,0 +1,11 @@
+<div id="searchForm">
+  <div>
+    <a ng-click="showLogout = !showLogout">Logout</a>
+  </div>
+  <span ng-if="showLogout">
+    <a ng-href="/logout" target="_self"><button class="loginBtn loginBtn--facebook" >Logout</button></a>
+  </span>
+  <span ng-if="!showLogout">
+    <a ng-click="showLogout = !showLogout" ng-href="/auth/facebook" target="_self"><button class="loginBtn loginBtn--facebook" >Login with facebook</button></a>
+  </span>
+</div>
